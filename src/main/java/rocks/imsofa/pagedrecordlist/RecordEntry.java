@@ -13,7 +13,12 @@ import java.util.Map;
  *
  * @author lendle
  */
-public class RecordEntry implements Serializable{
-    private long globalIndex=-1;
-    private Map<String, Serializable> values=new HashMap<>();
+public class RecordEntry{
+    private Map<String, Object> values=new HashMap<>();
+    public void setValue(String key, Object value){
+        this.values.put(key, value);
+    }
+    public Object getValue(String key){
+        return this.values.get(key);
+    }
 }

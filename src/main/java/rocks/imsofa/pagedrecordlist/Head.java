@@ -13,8 +13,18 @@ import java.util.List;
  */
 public class Head {
     private long pageSize=-1;
-    private List<String> attributes=null;
+    private long length=0;
 
+    public long getLength() {
+        return length;
+    }
+
+    public void setLength(long length) {
+        this.length = length;
+    }
+    
+    
+    
     public long getPageSize() {
         return pageSize;
     }
@@ -22,13 +32,4 @@ public class Head {
     public void setPageSize(long pageSize) {
         this.pageSize = pageSize;
     }
-
-    public List<String> getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(List<String> attributes) {
-        this.attributes = attributes;
-    }
-    
 }
